@@ -1,5 +1,5 @@
 <template>
-    <header>this is header </header>
+    <Header />
     <slot />
-    <footer> this id footer </footer>
+    <Footer /> 
 </template>

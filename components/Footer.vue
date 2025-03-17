@@ -6,20 +6,14 @@ defineProps({
 <template>
   <div>
 <footer class=" flex space-y-10 justify-center px-10 py-5 dark:bg-gray-900 align-bottom ">
-  <div class="flex space-y-10 justify-between  dark:bg-gray-900 container mx-auto " >
+  <div class="flex justify-between  dark:bg-gray-900 container mx-auto align-middle " >
     <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="./../assets/images/Logo-Test.png"" class="h-12 bg-white" alt="Logo" />
-        
     </a>
   
-    <nav class="flex justify-center flex-wrap gap-6 text-white font-medium">
-        <a class="hover:text-blue-700" href="#">Home</a>
-        <a class="hover:text-blue-700" href="#">About</a>
-        <a class="hover:text-blue-700" href="#">Services</a>
-        <a class="hover:text-blue-700" href="#">Media</a>
-        <a class="hover:text-blue-700" href="#">Gallery</a>
-        <a class="hover:text-blue-700" href="#">Contact</a>
-    </nav>
+    <div class="flex justify-center flex-wrap gap-6 text-white font-medium align-middle">
+       <p class=" dark:bg-gray-900  text-center text-white font-medium">&copy; 2022 Company Ltd. All rights reservered.</p>
+    </div>
 
     <div class="flex justify-center space-x-5">
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
@@ -40,6 +34,6 @@ defineProps({
     </div>
   </div>
 </footer>
-<p class=" dark:bg-gray-900  text-center text-white font-medium">&copy; 2022 Company Ltd. All rights reservered.</p>
+
 </div>
 </template>

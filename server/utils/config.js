@@ -1,5 +1,6 @@
 import { config as conf } from "dotenv";
 conf();
+
 const _config = {
     port    : process.env.PORT,
     databaseURL: process.env.MONGO_DB_URL,

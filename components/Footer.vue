@@ -8,11 +8,11 @@ defineProps({
 <footer class=" flex space-y-10 justify-center px-10 py-5 dark:bg-gray-900 align-bottom ">
   <div class="flex justify-between  dark:bg-gray-900 container mx-auto align-middle " >
     <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="./../assets/images/Logo-Test.png"" class="h-12 bg-white" alt="Logo" />
+        <img src="./../assets/images/Logo-Test.png"" class="h-12 bg-white rounded-md" alt="Logo" />
     </a>
   
     <div class="flex justify-center flex-wrap gap-6 text-white font-medium align-middle">
-       <p class=" dark:bg-gray-900  text-center text-white font-medium">&copy; 2022 Company Ltd. All rights reservered.</p>
+       <p class=" dark:bg-gray-900  text-center text-amber-300  font-medium">&copy; 2022 Company Ltd. All rights reservered.</p>
     </div>
 
     <div class="flex justify-center space-x-5">

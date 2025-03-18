@@ -1,4 +1,10 @@
-    <template>
+<script setup>
+definePageMeta({
+  middleware: 'auth',
+});
+</script>
+
+    <template >
        <section class="bg-gray-50 dark:bg-gray-900">
             <div class=" px-6 py-8 mx-auto md:h-screen lg:py-0 text-center">
                 <h2 class="text-orange-300 text-3xl font-bold uppercase pt-28"> Chaitanya Kulkarni </h2>
@@ -9,4 +15,3 @@
             </div>
         </section>
     </template>
-

@@ -2,7 +2,7 @@ import connectDB from '../../utils/db';
 import userModel from '../../models/userModel';
 import bcrypt from "bcrypt";
 import jwt from 'jsonwebtoken';
-import { config }  from './../../utils/config'
+import { config }  from '../../utils/config'
 
 
 

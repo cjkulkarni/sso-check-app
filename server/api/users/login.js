@@ -8,7 +8,7 @@ export default defineEventHandler(async (event) => {
     try {
       const body = await readBody(event)
       const user = await userModel.find({email: body.email});
-      if (user.length==0 && user.email  == "") {
+      if (user.length==0 || user.email  == "") {
         throw new Error("user not exist");
       }
         try {

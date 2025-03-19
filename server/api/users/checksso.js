@@ -9,14 +9,14 @@ export default defineEventHandler(async (event) => {
       
       const body = await readBody(event)
       let ssotoken = body.ssotoken;
-      ssotoken = ssotoken.substring(2, str.length - 2);
-      const email = decodeURIComponent(escape(atob(ssotoken)));
-      const user = await userModel.find({email: email});
-            if (user.length==0 && user.email  == "") {
+      ssotoken = ssotoken.substring(2, ssotoken.length - 2);
+      const email = decodeURIComponent(atob(ssotoken));
+    const user = await userModel.find({ email: email });
+            if (user.length==0 || user.email  == "") {
               throw new Error("user not exist");
             }
               try {
-                            const token = jwt.sign({ sub: user[0]._id }, config.jwtSecret, { expiresIn: "7d" });
+                const token = jwt.sign({ sub: user[0]._id }, config.jwtSecret, { expiresIn: "7d" });
                 return { user: { name: user[0].name, email: user[0].email },token: token };
                        }catch(error){
                      return { message: "Error while signing the token " + error };
@@ -24,6 +24,6 @@ export default defineEventHandler(async (event) => {
       
 
   } catch (error) {
-    return { error: 'SSO check failed' };
+    return { error: 'SSO check failed'+error };
   }
 });

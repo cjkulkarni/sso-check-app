@@ -31,7 +31,7 @@ export const useAuth = () => {
     try {
       
      
-      const wpResponse = await fetch('http://localhost/crmlabs/wp-json/custom-sso/v1/check', {
+      const wpResponse = await fetch('https://csdev4.cskills.me/wp-json/custom-sso/v1/check', {
       credentials: 'include', // Ensures cookies are sent
     });
      
@@ -40,21 +40,20 @@ export const useAuth = () => {
         if (!wpUser?.logged_in) {
            throw new Error("sso not found");
       }
-      const ssotoken = wpUser.ssotoken;
-      const response = await fetch('/api/users/checksso',{
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ssotoken  }),
-      });
+      // const ssotoken = wpUser.ssotoken;
+      // const response = await fetch('/api/users/checksso',{
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ ssotoken  }),
+      // });
 
-      const data = await response.json();
-      if (!data.logged_in) {
-        throw new Error("sso not found");
-      }
-      if (data.token) {
-        authToken.value = data.token;
-        authUser.value = data.user;
-      }
+      // const data = await response.json();
+     
+      
+      authToken.value = true;
+        
+        
+      
     } catch (error) {
       console.error('SSO Check failed:', error);
       logout(); // Clear session if SSO fails
